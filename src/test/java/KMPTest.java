@@ -25,4 +25,26 @@ public class KMPTest {
         Assert.assertEquals(epxected, actual);
 
     }
+    @Test
+    public void test3(){
+        String text = "ABABDABACDABABCABAB";
+        String pattern = "ABABCABAB";
+        List<Integer> epxected = new ArrayList<>(List.of(10));
+        List<Integer> actual = new ArrayList<>();
+        new KMP2().getPatternMatchingIndex(text, pattern, actual);
+
+        Assert.assertEquals(epxected, actual);
+
+    }
+    @Test
+    public void test4(){
+        String text = "sadbutsad";
+        String pattern = "sad";
+        List<Integer> epxected = new ArrayList<>(List.of(0, 6));
+        List<Integer> actual = new ArrayList<>();
+        new KMP2().getPatternMatchingIndex(text, pattern, actual);
+
+        Assert.assertEquals(epxected, actual);
+
+    }
 }
